@@ -7,7 +7,6 @@ class Program
     {
         int startValue = int.Parse(Console.ReadLine());
         int endValue = int.Parse(Console.ReadLine());
-        double[] arr2 = Cubarize(startValue, endValue);
         PrintSum(Cubarize(startValue, endValue));
     }
     static void Cubarize(int startValue, int endValue)
