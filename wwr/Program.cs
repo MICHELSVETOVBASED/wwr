@@ -46,8 +46,8 @@ class Program
         {
             sum += arr1[i];
         }
-        Console.WriteLine(sum);
-        
+        Console.WriteLine(sum); Console.WriteLine(sum);
+
     }
 }
 
