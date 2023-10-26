@@ -14,6 +14,7 @@ class Program
         
 
 
+
     }
     static int [] Cubarize(int startValue, int endValue)
     {
