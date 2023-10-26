@@ -12,6 +12,8 @@ class Program
         PrintSum(Cubarize(startValue, endValue));
         
         
+
+
     }
     static int [] Cubarize(int startValue, int endValue)
     {
