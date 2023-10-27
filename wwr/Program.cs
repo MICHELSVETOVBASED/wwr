@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-/*public class MainClass
+public class MainClass
 {
     public static void Main()
     {
@@ -29,7 +29,7 @@ using System.Collections.Generic;
     }
     static void PrintEven(List<int> newlist)
     {
-        for (int i = 0; newlist[i] < newlist.Count; i++)
+        for (int i = 0; i < newlist.Count; i++)
         {
             if (newlist[i] == 0)
             {
