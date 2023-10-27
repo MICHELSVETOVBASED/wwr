@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-public class MainClass
+/*public class MainClass
 {
     public static void Main()
     {
