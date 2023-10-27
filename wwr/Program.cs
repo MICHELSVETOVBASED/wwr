@@ -1,15 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-
-
-public class MainClass
-{
-    public static void Main()
-    {
-        int startValue = int.Parse(Console.ReadLine());
-        int endValue = int.Parse(Console.ReadLine());
-        PrintEven(GetMultiple(startValue, endValue));
-    }
     static List<int> GetMultiple(int startValue, int endValue)
     {
         List<int> list = new List<int>();
