@@ -1,67 +1,49 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
+using System.Collections.Generic;
 
-class Program
+
+public class MainClass
 {
     public static void Main()
     {
         int startValue = int.Parse(Console.ReadLine());
         int endValue = int.Parse(Console.ReadLine());
-        //double[] arr2 = new double[endValue - startValue];
-        PrintSum(Cubarize(startValue, endValue));
-        
-        
-
-
-
+        PrintEven(GetMultiple(startValue, endValue));
     }
-    static int [] Cubarize(int startValue, int endValue)
+    static List<int> GetMultiple(int startValue, int endValue)
     {
-        int res = endValue - startValue;
-        int[] arr = new int[res+1];
-        
-        if (startValue < 0)
+        List<int> list = new List<int>();
+        List<int> newlist = new List<int>();
+        for (int i = startValue; i != endValue; i++)
         {
-            for (int i = 0, k = startValue; i != arr.Length; i++)
+            list.Add(i);
+        }
+        for (int i = 0; i != list.Count; i++)
+        {
+            if (list[i] % 7 == 0)
             {
-                arr[i] = k;
-                k++;
+                newlist.Add(list[i]);
             }
-            for (int i = 0; i != arr.Length; i++)
-            {
-                Console.WriteLine(arr[i]);
-            
-            }
-            
-            
-
         }
-        double[] arr1 = Array.ConvertAll(arr, i => (double)i);
-        for (int i = 0; i != arr.Length; i++)
-        {
-            arr1[i] = Math.Pow(arr[i], 3);
-            Console.WriteLine(arr1[i]);
-        }
-        int[] arr2 = new int[res + 1];
-        for ( int i = 0; i!=arr.Length;i++)
-        {
-            arr2[i] = Convert.ToInt32(arr1[i]);
-        }
-        return arr2;
-   
-        
-
-
+        return newlist;
     }
-    public void PrintSum(int[] arr2)
+    static void PrintEven(List<int> newlist)
     {
-        int sum = 0;
-        for (int i = 0; i != arr2.Length; i++)
+        for (int i = 0; newlist[i] < newlist.Count; i++)
         {
-            sum += arr2[i];
+            if (newlist[i] == 0)
+            {
+                newlist.Remove(newlist[i]);
+            }
         }
-        Console.WriteLine(sum);
+        for (int i = 0; i <= newlist.Count; i++)
+        {
+            if (i % 2 != 0)
+            {
+                Console.Write($"{newlist[i]} ");
+            }
+            else { continue; }
+        }
 
     }
 }
